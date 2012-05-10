@@ -1,0 +1,17 @@
+extend layout
+block body
+  .container
+    button#danger.btn.btn-danger(data-toggle="modal"
+      data-target=".x-danger-alert") Do Not Press
+  .modal.x-danger-alert.fade
+    .modal-header
+      a.close(data-dismiss="modal") &times;
+      h3 Why did you press it?
+    .modal-body
+      p You pressed the button marked 
+        strong Do Not Press
+        .
+    .modal-footer
+      button.btn.btn-warning(data-dismiss="modal") Continue
+      button.btn(data-dismiss="modal") Cancel
+  != js("ex8")

@@ -1,0 +1,15 @@
+extends layout
+block body
+  .container
+    table.table.table-bordered.span6
+      thead:tr
+        th.span3 CSS Class
+        th
+      tbody
+        tr
+          td.span3 btn btn-primary
+          td: button.btn.btn-primary Primary
+        each cl in ["btn-large", "btn-small", "btn-mini", "disabled"]
+          tr
+            td btn btn-primary #{cl}
+            td: button(class="btn btn-primary #{cl}") Primary

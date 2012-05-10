@@ -1,0 +1,17 @@
+extend layout
+block body
+  .container
+    ul.nav.nav-tabs
+      li.active: a(href="#moe", data-toggle="tab") Moe
+      li: a(href="#larry", data-toggle="tab") Larry
+      li: a(href="#curly", data-toggle="tab") Curly
+    .tab-content
+      .tab-pane.active#moe
+        h1 Moe Howard
+        img(src="images/moe.jpg")
+      .tab-pane#larry
+        h1 Larry Fine
+        img(src="images/larry.jpg")
+      .tab-pane#curly
+        h1 Curly Howard
+        img(src="images/curly.jpg")
