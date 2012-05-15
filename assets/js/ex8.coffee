@@ -6,4 +6,4 @@ jQuery ($) ->
         <strong>Well, you pressed it!</strong>
       </div>
     """)
-    alert.prependTo $(".container")
+    alert.prependTo $(".x-alert-insertion-point")
