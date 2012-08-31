@@ -1,0 +1,34 @@
+extend layout
+block body
+  .container
+    ul.nav.nav-pills
+      li.dropdown
+        a.dropdown-toggle(href="#", data-toggle="dropdown")
+          | Text Only 
+          b.caret
+        ul.dropdown-menu
+          li: a(href="#") Edit
+          li: a(href="#") Delete
+          li.divider
+          li: a(href="#") Lock
+          li: a(href="#") Unlock
+      li.dropdown
+        a.dropdown-toggle(href="#", data-toggle="dropdown")
+          | Text &amp; Icons 
+          b.caret
+        ul.dropdown-menu
+          li: a(href="#")
+            i.icon-pencil
+            |  Edit
+          li: a(href="#")
+            i.icon-remove
+            |  Delete
+          li.divider
+          li: a(href="#")
+            i.icon-lock
+            |  Lock
+          li: a(href="#")
+            i.icon-none
+            |  Unlock
+append head
+  != js("ex9")

@@ -1,7 +1,7 @@
 !!! 5
 - var menuItems = ["Fixed Grid", "Fixed Grid - Nested Rows", "Fluid Grid", "Basic Table"];
 - menuItems.push("Buttons", "Tabs", "Dynamic Tabs");
-- menuItems.push("Modal Dialog / Alert")
+- menuItems.push("Modal Dialog / Alert", "Dropdowns")
 html
   head
     title Bootstrap Example
@@ -17,7 +17,7 @@ html
         Twitter Bootstrap Examples
       ul.nav.pull-right: li.dropdown
         a.dropdown-toggle(href="#", data-toggle="dropdown")
-          | Example
+          | Example 
           b.caret
         ul.dropdown-menu
           each label, ix in menuItems
