@@ -1,5 +1,5 @@
 !!! 5
-- var menuItems = ["Fixed Grid", "Fixed Grid - Nested Rows", "Fluid Grid", "Basic Table"];
+- var menuItems = ["Fixed Grid", "Fixed Grid - Nested Rows", "Fluid Grid", "Table"];
 - menuItems.push("Buttons", "Tabs", "Dynamic Tabs");
 - menuItems.push("Modal Dialog / Alert", "Dropdowns")
 html
@@ -12,7 +12,7 @@ html
     != js("underscore")
     block head
   body
-    .navbar.navbar-fixed-top: .navbar-inner: .container
+    .navbar.navbar-fixed-top.navbar-inverse: .navbar-inner: .container
       a.brand(href="https://github.com/hlship/bootstrap-examples").
         Twitter Bootstrap Examples
       ul.nav.pull-right: li.dropdown

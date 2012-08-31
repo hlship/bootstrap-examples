@@ -1,11 +1,22 @@
 extends layout
 block body
   .container
-    table.span12.table.table-bordered.table-condensed.table-striped
+
+    form.well
+      label.checkbox.inline
+        input(type="checkbox", value="table", checked=true)
+        | table
+      each name in ["striped", "bordered", "hover", "condensed"]
+        label.checkbox.inline
+          input(type="checkbox", value="table-#{name}")
+          = name
+
+    table.span12.table
       caption
-        | Table with class "table table-bordered
-        | table-condensed table-striped"
-      thead:tr
+        | Table with class "
+        span
+        |"
+      thead: tr
         th.span8 Column A
         th Column B
         th.span2 Column C
@@ -15,3 +26,4 @@ block body
             each cell in ["A", "B", "C"]
               td Cell #{row}-#{cell}
 
+  != js("ex4")
