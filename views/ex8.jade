@@ -1,9 +1,9 @@
 extend layout
 block body
-  .container.x-alert-insertion-point
-    button#danger.btn.btn-danger(data-toggle="modal"
-      data-target=".x-danger-alert") Do Not Press
-  .modal.x-danger-alert.fade
+  .container(data-alert-insertion-point=true)
+    button.btn.btn-danger(data-toggle="modal"
+      data-target="#danger-alert") Do Not Press
+  .modal.fade#danger-alert
     .modal-header
       a.close(data-dismiss="modal") &times;
       h3 Why did you press it?
