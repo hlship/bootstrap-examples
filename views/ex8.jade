@@ -2,7 +2,9 @@ extend layout
 block body
   .container(data-alert-insertion-point=true)
     button.btn.btn-danger(data-toggle="modal"
-      data-target="#danger-alert") Do Not Press
+      data-target="#danger-alert")
+      i.icon-warning-sign.icon-white
+      |  Do Not Press
   .modal.fade#danger-alert
     .modal-header
       a.close(data-dismiss="modal") &times;
