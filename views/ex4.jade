@@ -3,15 +3,12 @@ block body
   .container
 
     form.well
-      label.checkbox.inline
-        input(type="checkbox", value="table", checked=true)
-        | table
-      each name in ["striped", "bordered", "hover", "condensed"]
+      each name in ["table", "table-striped", "table-bordered", "table-hover", "table-condensed"]
         label.checkbox.inline
-          input(type="checkbox", value="table-#{name}")
+          input(type="checkbox", value="#{name}")
           = name
 
-    table.span12.table
+    table.span12
       caption
         | Table with class "
         span
