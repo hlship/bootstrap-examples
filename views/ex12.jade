@@ -1,5 +1,32 @@
 extend layout
 block body
   .container
+    form.form-horizontal.well.well-small#controls
+        .control-group
+          label.control-label
+            | Form Class:
+          .controls
+            for name in ['horizontal']
+              label.inline.checkbox
+                input(type='checkbox', value="form-#{name}")
+                | form-#{name}
+
+    form#subject
+      .control-group
+        label.control-label E-Mail Address:
+        .controls
+          .input-prepend
+            span.add-on: i.icon-envelope 
+            input.input-large#email(type='text', placeholder="you@hostname.com")
+      .control-group
+        label.control-label Confirm E-Mail:
+        .controls
+          .input-prepend
+            span.add-on: i.icon-envelope 
+            input.input-large#confirm(type='text', placeholder="you@hostname.com")
+          p.help-block Confirm your E-mail address by entering it again.
+      .form-actions
+        button.btn.btn-primary Register
+
 append head
   != js("ex12")
